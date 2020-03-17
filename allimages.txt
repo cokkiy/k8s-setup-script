@@ -1,0 +1,68 @@
+./coredns.yaml:        image: coredns/coredns:1.6.6
+./dashboard.yaml:          image: kubernetesui/dashboard:v2.0.0-beta5
+./dashboard.yaml:          image: kubernetesui/metrics-scraper:v1.0.2
+./dashboard.yaml:          image: k8s.gcr.io/heapster-influxdb-$ARCH:v1.3.3
+./dashboard.yaml:          image: k8s.gcr.io/heapster-grafana-$ARCH:v4.4.3
+./dashboard.yaml:        - image: k8s.gcr.io/heapster-$ARCH:v1.5.2
+./dashboard.yaml:        - image: k8s.gcr.io/heapster-$ARCH:v1.5.2
+./dashboard.yaml:        - image: cdkbot/addon-resizer-$ARCH:1.8.1
+./dashboard.yaml:        - image: cdkbot/addon-resizer-$ARCH:1.8.1
+./dns.yaml:        image: gcr.io/google_containers/k8s-dns-kube-dns-$ARCH:1.14.7
+./dns.yaml:        image: gcr.io/google_containers/k8s-dns-dnsmasq-nanny-$ARCH:1.14.7
+./dns.yaml:        image: gcr.io/google_containers/k8s-dns-sidecar-$ARCH:1.14.7
+./fluentd/es-statefulset.yaml:      - image: elasticsearch:6.5.1
+./fluentd/es-statefulset.yaml:      - image: alpine:3.6 
+./fluentd/fluentd-es-ds.yaml:        image: k8s.gcr.io/fluentd-elasticsearch:v2.2.0
+./fluentd/kibana-deployment.yaml:        image: docker.elastic.co/kibana/kibana-oss:6.3.2
+./gpu.yaml:        image: nvidia/k8s-device-plugin:1.11
+./ingress.yaml:      - image: quay.io/kubernetes-ingress-controller/nginx-ingress-controller-$ARCH:0.25.1
+./jaeger/operator.yaml:          image: jaegertracing/jaeger-operator:1.14.0
+./knative/monitoring.yaml:        image: k8s.gcr.io/elasticsearch:v5.6.4
+./knative/monitoring.yaml:        image: alpine:3.6
+./knative/monitoring.yaml:        image: docker.elastic.co/kibana/kibana:5.6.4
+./knative/monitoring.yaml:        image: k8s.gcr.io/fluentd-elasticsearch:v2.0.4
+./knative/monitoring.yaml:        image: quay.io/coreos/kube-rbac-proxy:v0.3.0
+./knative/monitoring.yaml:        image: quay.io/coreos/kube-rbac-proxy:v0.3.0
+./knative/monitoring.yaml:        image: quay.io/coreos/kube-state-metrics:v1.3.0
+./knative/monitoring.yaml:        image: k8s.gcr.io/addon-resizer:1.7
+./knative/monitoring.yaml:        image: quay.io/prometheus/node-exporter:v0.15.2
+./knative/monitoring.yaml:        image: quay.io/coreos/kube-rbac-proxy:v0.3.0
+./knative/monitoring.yaml:        image: grafana/grafana:6.3.3
+./knative/monitoring.yaml:        image: prom/prometheus:v2.2.1
+./knative/monitoring.yaml:        image: docker.io/openzipkin/zipkin:2.13.0
+./knative/release.yaml:            image:
+./knative/release.yaml:        image: gcr.io/knative-releases/knative.dev/eventing/cmd/controller@sha256:1619243129eded8d71164ee2f632ba262d39738ad932dd2e87e02e6159851a40
+./knative/release.yaml:        image: gcr.io/knative-releases/knative.dev/eventing/cmd/sources_controller@sha256:47469988b5fbb78dd88e6f36bdf3a8024a32c0f9a0a9cb0d14b4164a2161ec79
+./knative/release.yaml:        image: gcr.io/knative-releases/knative.dev/eventing/cmd/webhook@sha256:203be3e97be6d7ee65474ddbc5d081b68768e4c40729f245e85f1b71ae932b72
+./knative/release.yaml:        image: gcr.io/knative-releases/knative.dev/eventing/cmd/in_memory/channel_controller@sha256:3aec3b1570d8890c413d45d2b02ea508e6d59dee3fc899634e91b4a5fdde5155
+./knative/release.yaml:        image: gcr.io/knative-releases/knative.dev/eventing/cmd/in_memory/channel_dispatcher@sha256:0d39aa1579d735203e7f6aa3bf6e0235f5fb96abd8935ea8fd61936d708ff135
+./knative/serving.yaml:  image: gcr.io/knative-releases/knative.dev/serving/cmd/queue@sha256:9ee46b5f0bd5d3a3dc7af319dafb79e88e18092bd1af6ff835b762fc12ba642a
+./knative/serving.yaml:        image: gcr.io/knative-releases/knative.dev/serving/cmd/activator@sha256:0afc012397557e59991af44660e4729de524368d5e2dda01c8f9d0622f5a90d7
+./knative/serving.yaml:        image: gcr.io/knative-releases/knative.dev/serving/cmd/autoscaler-hpa@sha256:3f3c381fe9e3d372f258f6d3e8fad89ad1c7d572d07625a759bce85ff718501a
+./knative/serving.yaml:        image: gcr.io/knative-releases/knative.dev/serving/cmd/autoscaler@sha256:5875e715093c646c283399baf191f8df801509f755f25f22d2c1e1900ee2838b
+./knative/serving.yaml:        image: gcr.io/knative-releases/knative.dev/serving/cmd/controller@sha256:80173e32cc7111b6d92f85530cf9e933ee2e8f4cbafe6412df486e53fa1b5479
+./knative/serving.yaml:        image: gcr.io/knative-releases/knative.dev/serving/cmd/networking/istio@sha256:64b784b190c43427ecc66e7f12d892167a13f703aed0ff696a4ca6609ebb66f9
+./knative/serving.yaml:        image: gcr.io/knative-releases/knative.dev/serving/cmd/webhook@sha256:50b1a9fe29d661718b8935b58d1baf07e527dd0d4fb20061c9112d1eb5b88a8e
+./metallb.yaml:        image: metallb/speaker:v0.8.2
+./metallb.yaml:        image: metallb/controller:v0.8.2
+./metrics-server.yaml:        image: k8s.gcr.io/metrics-server-$ARCH:v0.2.1
+./metrics-server.yaml:        image: cdkbot/addon-resizer-$ARCH:1.8.1
+./prometheus/grafana-deployment.yaml:      - image: grafana/grafana:6.4.3
+./prometheus/kube-state-metrics-deployment.yaml:        image: quay.io/coreos/kube-rbac-proxy:v0.4.1
+./prometheus/kube-state-metrics-deployment.yaml:        image: quay.io/coreos/kube-rbac-proxy:v0.4.1
+./prometheus/kube-state-metrics-deployment.yaml:        image: quay.io/coreos/kube-state-metrics:v1.8.0
+./prometheus/node-exporter-daemonset.yaml:        image: quay.io/prometheus/node-exporter:v0.18.1
+./prometheus/node-exporter-daemonset.yaml:        image: quay.io/coreos/kube-rbac-proxy:v0.4.1
+./prometheus/prometheus-adapter-deployment.yaml:        image: quay.io/coreos/k8s-prometheus-adapter-amd64:v0.5.0
+./prometheus/setup/prometheus-operator-0alertmanagerCustomResourceDefinition.yaml:                  image:
+./prometheus/setup/prometheus-operator-0alertmanagerCustomResourceDefinition.yaml:            image:
+./prometheus/setup/prometheus-operator-0alertmanagerCustomResourceDefinition.yaml:                  image:
+./prometheus/setup/prometheus-operator-0alertmanagerCustomResourceDefinition.yaml:                      image:
+./prometheus/setup/prometheus-operator-0prometheusCustomResourceDefinition.yaml:                  image:
+./prometheus/setup/prometheus-operator-0prometheusCustomResourceDefinition.yaml:            image:
+./prometheus/setup/prometheus-operator-0prometheusCustomResourceDefinition.yaml:                  image:
+./prometheus/setup/prometheus-operator-0prometheusCustomResourceDefinition.yaml:                image:
+./prometheus/setup/prometheus-operator-0prometheusCustomResourceDefinition.yaml:                      image:
+./prometheus/setup/prometheus-operator-deployment.yaml:        image: quay.io/coreos/prometheus-operator:v0.34.0
+./registry.yaml:        image: cdkbot/registry-$ARCH:2.6
+./storage.yaml:          image: cdkbot/hostpath-provisioner-$ARCH:1.0.0
